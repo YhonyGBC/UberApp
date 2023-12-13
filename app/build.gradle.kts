@@ -52,6 +52,15 @@ dependencies {
     implementation("com.google.firebase:firebase-auth:22.3.0")
     implementation("com.google.firebase:firebase-firestore")
 
+    implementation("com.google.maps.android:maps-ktx:5.0.0")
+    implementation("com.google.maps.android:maps-utils-ktx:5.0.0")
+    implementation("com.google.maps.android:android-maps-utils:3.8.0")
+    implementation("com.google.android.gms:play-services-maps:18.0.2")
+    implementation("com.google.android.gms:play-services-location:20.0.0")
+
+    implementation("com.github.prabhat1707:EasyWayLocation:2.4")
+    implementation("com.github.imperiumlabs:GeoFirestore-Android:v1.4.0")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

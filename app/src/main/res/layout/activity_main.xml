@@ -22,13 +22,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/black"
-            android:alpha="0.8"/>
+            android:alpha="0.7"/>
     </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
+        android:layout_height="match_parent">
 
         <View
             android:layout_width="match_parent"
@@ -44,10 +43,10 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="C A R R E R A S"
+                android:layout_height="80dp"
+                android:text="S O Ride"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="50sp"
                 android:textStyle="bold|italic"
                 android:textAlignment="center"/>
 
@@ -59,6 +58,32 @@
                 android:layout_marginTop="10dp">
 
                 <View
+                    android:layout_width="25dp"
+                    android:layout_height="1dp"
+                    android:background="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viaje con escala"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="1dp"
+                    android:background="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/white"/>
@@ -77,19 +102,12 @@
                     android:background="@color/white"/>
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textAlignment="center"/>
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
+                android:layout_marginTop="60dp"
                 app:startIconDrawable="@drawable/ic_email_white"
                 app:startIconTint="@color/white">
 
@@ -132,21 +150,34 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/rounded_buttom"/>
 
-            <Button
-                android:id="@+id/btnRegister"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="REGISTRARSE"
-                android:textColor="@color/black"
+                android:orientation="horizontal"
+                android:gravity="center"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/rounded_buttom"
-                app:backgroundTint="@color/white"/>
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿No tienes una cuenta? "
+                    android:textColor="@color/light_grey"/>
+
+                <TextView
+                    android:id="@+id/btnRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regístrate"
+                    android:textColor="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
     </FrameLayout>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
