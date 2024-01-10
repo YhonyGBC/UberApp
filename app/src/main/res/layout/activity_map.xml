@@ -13,6 +13,48 @@
         android:layout_height="match_parent"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="vertical">
+    
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            app:cardElevation="10dp">
+
+            <fragment
+                android:id="@+id/placesAutocompleteOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            app:cardElevation="10dp">
+
+            <fragment
+                android:id="@+id/placesAutocompleteDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
     <Button
         android:id="@+id/btnRequestTrip"
         android:layout_width="match_parent"

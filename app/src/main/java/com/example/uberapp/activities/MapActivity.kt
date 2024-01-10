@@ -35,6 +35,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
@@ -45,6 +46,12 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private var myLocationLatLng: LatLng? = null
     private val geoProvider = GeoProvider()
     private val authProvider = AuthProvider()
+
+    //GOOGLE PLACES
+    private var autocompleteOrigin: AutocompleteSupportFragment? = null
+    private var autocompleteDestination: AutocompleteSupportFragment? = null
+    private var originName = ""
+    private var destinationName = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
