@@ -58,6 +58,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:18.0.2")
     implementation("com.google.android.gms:play-services-location:20.0.0")
     implementation("com.google.maps.android:places-ktx:3.1.0")
+    implementation("com.android.volley:volley:1.2.1")
 
     implementation("com.github.prabhat1707:EasyWayLocation:2.4")
     implementation("com.github.imperiumlabs:GeoFirestore-Android:v1.4.0")

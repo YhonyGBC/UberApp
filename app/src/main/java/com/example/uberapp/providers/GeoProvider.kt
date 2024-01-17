@@ -7,6 +7,7 @@ import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
 import org.imperiumlabs.geofirestore.GeoFirestore
+import org.imperiumlabs.geofirestore.GeoQuery
 
 class GeoProvider {
 
@@ -17,6 +18,16 @@ class GeoProvider {
     fun saveLocation(idDriver: String, position: LatLng) {
         geoFirestore.setLocation(idDriver, GeoPoint(position.latitude, position.longitude))
     }
+
+    // obtener los conductores a través de un radio de búsqueda
+    fun getNearbyDrivers(position: LatLng, radius: Double): GeoQuery{
+        val query = geoFirestore.queryAtLocation(GeoPoint(position.latitude, position.longitude), radius)
+        // la posición de los conductores se va a estar actualizando constantemente por lo que tiene que
+        // ir eliminando esos escuchadores
+        query.removeAllListeners()
+        return query
+    }
+
     // elimina la licalización
     fun removeLocation(idDriver: String) {
         collection.document(idDriver).delete()
